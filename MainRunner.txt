@@ -1,0 +1,38 @@
+package project2;
+
+public class MainRunner {
+
+	public static void main(String[] args) {
+		
+	
+		
+			
+			Accountant accountant=new Accountant("Sachi", 30000, "TaxFile");
+			accountant.worksOnTaxFile();
+			
+			Project faceBook=new Project("FaceBook Ads", 15);
+			
+			Developer developer=new Developer(faceBook, "Meta", "Mohit",15000);
+			developer.worksOnProject();
+			
+			Manager manager = new Manager("XYZ", 2000, "Rohan",20000, 0);
+			manager.workOnProduct();
+			manager.setSalary(5000);
+			int s = manager.getSalary();
+			System.out.println("Salary with incentive: "+s);
+			
+			manager.setMedicalInsurance(200000);
+			int m = manager.getMedicalInsurance();
+			System.out.println("Medical Insurance:  " +m);
+			
+			
+			
+	}
+			
+		}
+		
+			
+
+	
+
+

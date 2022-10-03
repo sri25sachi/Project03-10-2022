@@ -1,0 +1,67 @@
+package project2;
+
+public class Manager extends Employee{
+	String product;
+	int noOfProduct;
+	
+
+	public Manager() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Manager(String product, int noOfProduct, String name,int salary,int medicalInsurance) {
+		super(name,salary,medicalInsurance);
+		this.product = product;
+		this.noOfProduct = noOfProduct;
+	}
+	
+	
+	public String getProduct() {
+		return product;
+	}
+	public void setProduct(String product) {
+		this.product = product;
+	}
+	public int getNoOfProduct() {
+		return noOfProduct;
+	}
+	public void setNoOfProduct(int noOfProduct) {
+		this.noOfProduct = noOfProduct;
+	}
+
+	public void workOnProduct() {
+		System.out.println("Product:  "+ product);
+		System.out.println("No. Of Product:  "+noOfProduct);
+		System.out.println("Salary:  "+salary);
+		
+	}
+	
+	@Override
+	public void setSalary(int incentive) {
+		int previousSalary = super.getSalary();
+		super.setSalary(super.getSalary() + incentive);
+		
+	}
+	@Override
+	public void setMedicalInsurance(int medicalInsurance) {
+		super.setMedicalInsurance( super.getSalary() * 10);
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Sales [product=" + product + ", noOfProduct=" + noOfProduct + "]";
+	}
+	
+	
+	
+
+}
